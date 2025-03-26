@@ -2,21 +2,43 @@
 
 Some notes on how to run TreeQSM in Octave, I needed to do this as the HPC facility did not have a matlab licence. Hoping this will help people in a similar situation :)
 
-## 1. Create an environment and install Octave & prerequisties
-### Recommend method: using mamba (a quicker way)
+## 0. Install Miniconda (only if your conda is not available or conda base environment cannot install Mamba)
+Download the Miniconda installation package
 
-Install mamba in the conda base env if you don't have mamba before:
+`cd ~`
+
+`wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`
+
+Install Miniconda
+
+`bash Miniconda3-latest-Linux-x86_64.sh -u`
+
+Remove the installation package to clean up
+
+`rm Miniconda3-latest-Linux-x86_64.sh`
+
+Initialise Conda on all available shells
+
+`source ~/miniconda3/bin/activate`
+
+`conda init --all`
+
+
+## 1. Create an environment and install Octave & prerequisties
+### Recommend method: using Mamba (a quicker way)
+
+Install Mamba in the Conda base env if you don't have Mamba before:
 
 `conda install conda-forge::mamba`
 
-In the conda base env, create a new env named 'octave' using mamba:
+In the Conda base env, create a new env named 'octave' using Mamba:
 
 `mamba create -n octave -c conda-forge octave cmake cxx-compiler -y`
 
 
-### Alternative method: using conda
+### Alternative method: using Conda
 
-In the conda base env, directly create a new env named 'octave' using conda:
+In the Conda base env, directly create a new env named 'octave' using Conda:
 
 `conda create -n octave -c conda-forge octave cmake cxx-compiler -y`
 
