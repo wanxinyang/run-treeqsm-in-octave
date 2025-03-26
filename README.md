@@ -5,16 +5,19 @@ Some notes on how to run TreeQSM in Octave, I needed to do this as the HPC facil
 ## 1. Create an environment and install Octave & prerequisties
 ### Recommend method: using mamba (a quicker way)
 
-Install mamba in the base env if you don't have mamba before:
+Install mamba in the conda base env if you don't have mamba before:
 
 `conda install conda-forge::mamba`
 
-Create octave env using mamba:
+In the conda base env, create a new env named 'octave' using mamba:
 
 `mamba create -n octave -c conda-forge octave cmake cxx-compiler -y`
 
 
 ### Alternative method: using conda
+
+In the conda base env, directly create a new env named 'octave' using conda:
+
 `conda create -n octave -c conda-forge octave cmake cxx-compiler -y`
 
 ## 2. Open Octave and install prerequisites
@@ -22,11 +25,11 @@ Activate octave env:
 
 `conda activate octave`
 
-Open octave:
+Open octave gui:
 
 `octave`
 
-Install packages using octave commands:
+Install packages within octave gui, using octave commands:
 
 `pkg install -forge io`
 
