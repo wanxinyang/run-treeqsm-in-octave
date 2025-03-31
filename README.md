@@ -33,14 +33,14 @@ Install Mamba in the Conda base env if you don't have Mamba before:
 
 In the Conda base env, create a new env named 'octave' using Mamba:
 
-`mamba create -n octave -c conda-forge octave cmake cxx-compiler numpy tqdm -y`
+`mamba create -n octave -c conda-forge octave cmake cxx-compiler numpy tqdm pandas -y`
 
 
 ### Alternative method: using Conda
 
 In the Conda base env, directly create a new env named 'octave' using Conda:
 
-`conda create -n octave -c conda-forge octave cmake cxx-compiler numpy tqdm -y`
+`conda create -n octave -c conda-forge octave cmake cxx-compiler numpy tqdm pandas -y`
 
 ## 2. Open Octave and install prerequisites
 Activate octave env:
